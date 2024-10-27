@@ -2,7 +2,7 @@
 import { z } from 'zod'
 import { useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
-import { Shuffle, Sparkles } from 'lucide-vue-next'
+import { Shuffle } from 'lucide-vue-next'
 import { toast } from 'vue-sonner'
 import { DependencyType } from '@/components/ui/auto-form/interface'
 import { LinkSchema, nanoid } from '@/schemas/link'
@@ -75,27 +75,6 @@ const form = useForm({
 function randomSlug() {
   form.setFieldValue('slug', nanoid()())
 }
-
-const aiSlugPending = ref(false)
-async function aiSlug() {
-  if (!form.values.url)
-    return
-
-  aiSlugPending.value = true
-  try {
-    const { slug } = await useAPI('/api/link/ai', {
-      query: {
-        url: form.values.url,
-      },
-    })
-    form.setFieldValue('slug', slug)
-  }
-  catch (error) {
-    console.log(error)
-  }
-  aiSlugPending.value = false
-}
-
 onMounted(() => {
   if (link.value.expiration) {
     form.setFieldValue('optional.expiration', unix2date(link.value.expiration))
@@ -166,11 +145,6 @@ const { previewMode } = useRuntimeConfig().public
               <Shuffle
                 class="w-4 h-4 cursor-pointer"
                 @click="randomSlug"
-              />
-              <Sparkles
-                class="w-4 h-4 cursor-pointer"
-                :class="{ 'animate-bounce': aiSlugPending }"
-                @click="aiSlug"
               />
             </div>
             <AutoFormField

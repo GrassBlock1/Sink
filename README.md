@@ -36,7 +36,6 @@
 - **Analytics:** Monitor link analytics and gather insightful statistics.
 - **Serverless:** Deploy without the need for traditional servers.
 - **Customizable Slug:** Support for personalized slugs.
-- **🪄 AI Slug:** Leverage AI to generate slugs.
 - **Link Expiration:** Set expiration dates for your links.
 
 ## 🪧 Demo
@@ -93,8 +92,7 @@ We welcome your contributions and PRs.
 5. Save and deploy.
 6. Cancel the deployment, navigate to `Settings` -> `Functions`.
    1. KV namespace bindings. Bind the variable name `KV` to a KV namespace.
-   2. Workers AI Bindings. Bind the variable name `AI` to the Workers AI Catalog. _Optional_
-   3. Analytics Engine bindings. Bind the variable name `ANALYTICS` to the `sink` dataset, and enable [Cloudflare Analytics Engine beta](https://developers.cloudflare.com/analytics/analytics-engine/get-started/) for your account.
+   2. Analytics Engine bindings. Bind the variable name `ANALYTICS` to the `sink` dataset, and enable [Cloudflare Analytics Engine beta](https://developers.cloudflare.com/analytics/analytics-engine/get-started/) for your account.
 7. Redeploy.
 
 ## ⚒️ Configuration
