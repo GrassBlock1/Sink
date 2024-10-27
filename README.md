@@ -33,7 +33,6 @@
 ## ✨ Features
 
 - **URL Shortening:** Compress your URLs to their minimal length.
-- **Analytics:** Monitor link analytics and gather insightful statistics.
 - **Serverless:** Deploy without the need for traditional servers.
 - **Customizable Slug:** Support for personalized slugs.
 - **Link Expiration:** Set expiration dates for your links.
@@ -87,12 +86,10 @@ We welcome your contributions and PRs.
 4. Configure environment variables.
    1. `NUXT_SITE_TOKEN` length must exceed **8**.
    2. `NUXT_CF_ACCOUNT_ID` [find your account ID](https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/).
-   3. `NUXT_CF_API_TOKEN` Create a [Cloudflare API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/). This token requires `Account.Account Analytics` permissions at the very least. [Reference.](https://developers.cloudflare.com/analytics/analytics-engine/sql-api/#authentication).
 
 5. Save and deploy.
 6. Cancel the deployment, navigate to `Settings` -> `Functions`.
-   1. KV namespace bindings. Bind the variable name `KV` to a KV namespace.
-   2. Analytics Engine bindings. Bind the variable name `ANALYTICS` to the `sink` dataset, and enable [Cloudflare Analytics Engine beta](https://developers.cloudflare.com/analytics/analytics-engine/get-started/) for your account.
+   add KV namespace bindings. Bind the variable name `KV` to a KV namespace.
 7. Redeploy.
 
 ## ⚒️ Configuration
