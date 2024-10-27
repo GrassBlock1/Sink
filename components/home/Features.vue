@@ -1,5 +1,5 @@
 <script setup>
-import { AreaChart, Hourglass, Link, Paintbrush, ServerOff, Sparkles } from 'lucide-vue-next'
+import { Hourglass, Link, Paintbrush, ServerOff } from 'lucide-vue-next'
 
 const features = ref([
   {
@@ -7,12 +7,6 @@ const features = ref([
     description:
           'Compress your URLs to their minimal length.',
     icon: Link,
-  },
-  {
-    title: 'Analytics',
-    description:
-          'Monitor link analytics and gather insightful statistics.',
-    icon: AreaChart,
   },
   {
     title: 'Serverless',
@@ -25,12 +19,6 @@ const features = ref([
     description:
           'Support for personalized slugs.',
     icon: Paintbrush,
-  },
-  {
-    title: 'AI Slug',
-    description:
-          'Leverage AI to generate slugs.',
-    icon: Sparkles,
   },
   {
     title: 'Link Expiration',
