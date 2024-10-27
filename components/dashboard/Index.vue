@@ -16,7 +16,5 @@ provide('endAt', endAt)
 </script>
 
 <template>
-  <main class="space-y-6">
-    <DashboardViews />
-  </main>
+  <main class="space-y-6" />
 </template>
